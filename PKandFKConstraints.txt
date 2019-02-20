@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS customer ;
+CREATE TABLE customer (
+customerid mediumint,
+first_name varchar(255) default NULL,
+last_name varchar(255) default NULL,
+street_address varchar(255) default NULL,
+PRIMARY KEY (customerid)
+);
+
+DROP TABLE IF EXISTS orders ;
+CREATE TABLE orders (
+orderid mediumint,
+sales_rep varchar(255) default NULL,
+conf_num varchar(255) default NULL,
+PRIMARY KEY (orderid),
+customerid mediumint,
+FOREIGN KEY (customerid) REFERENCES customer(customerid)
+);

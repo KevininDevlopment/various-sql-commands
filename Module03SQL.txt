@@ -1,0 +1,7 @@
+SELECT * FROM CONTACT LIMIT 10;
+
+SELECT firstname, lastname FROM CONTACT LIMIt 10;
+
+SELECT firstname, lastname FROM CONTACT ORDER BY lastname DESC LIMIT 10
+
+SELECT firstname, lastname FROM Contact WHERE Title = "Mr." OR Title = "Mrs." ORDER BY lastname DESC LIMIT 10

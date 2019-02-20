@@ -1,0 +1,5 @@
+UPDATE Address SET City='Seattle' WHERE City ='Bothell';
+
+ALTER TABLE customer ADD customergender char(50);
+
+ALTER TABLE customer DROP customergender;

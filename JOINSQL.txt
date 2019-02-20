@@ -1,0 +1,32 @@
+SELECT smployee.* FROM employee
+INNER JOIN employeedepartmenthistory ON
+employeedepartmenthistory.EmployeeID = employee.EmployeeID
+INNER JOIN department ON
+department.DepartmentID = employeedepartmenthistory.DepartmentID
+WHERE department.name = "Engineering";
+
+
+SELECT employee.* FROM employee
+INNER JOIN employeedepartmenthistory ON
+employeedepartmenthistory.EmployeeID = employee.EmployeeID
+INNER JOIN department ON
+department.DepartmentID = employeedepartmenthistory.DepartmentID
+WHERE department.name <> "Engineering";
+
+SELECT `EmployeeID`, `ContactID` FROM `employee`
+LIMIT 10;
+
+SELECT employee.EmployeeID, emplyee.ContactID FROM employee
+INNER JOIN employeedepartmenthistory ON
+employeedepartmenthistory.EmployeeId = employee.EmployeeID
+INNER JOIN department ON 
+department.DepartmentID = employeedepartmenthistory.DepartmentID
+ORDER BY emplyee.ContactID ASC;
+
+SELECT employee.EmployeeID, employee.ContactID FROM employee
+INNER JOIN employeedepartmenthistory ON
+employeedepartmenthistory.EmployeeID = employee.EmployeeID
+INNER JOIN department ON
+department.DepartmentID = employeedepartmenthistory.DepartmentID
+WHERE department.Name = 'Engineering' OR 'sales'
+ORDER BY department.name ASC;
